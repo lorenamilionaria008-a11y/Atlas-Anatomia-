@@ -38,12 +38,6 @@ export function initPage() {
     });
   });
 
-  // Barra roja: texto + fecha definida por la oferta.
-  const txt = document.getElementById('topbar-text');
-  if (txt && OFFER.topbarText) txt.textContent = OFFER.topbarText;
-
-  const d = document.getElementById('topbar-date');
-  if (d && OFFER.topbarDate) d.textContent = OFFER.topbarDate;
 
   // Contador hasta la medianoche (hora del visitante). Reinicia cada día.
   const el = (id) => document.getElementById(id);
