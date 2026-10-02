@@ -38,12 +38,12 @@ export function initPage() {
     });
   });
 
-  // Barra roja: texto + fecha de hoy
+  // Barra roja: texto + fecha definida por la oferta.
   const txt = document.getElementById('topbar-text');
   if (txt && OFFER.topbarText) txt.textContent = OFFER.topbarText;
-  const now = new Date();
+
   const d = document.getElementById('topbar-date');
-  if (d) d.textContent = `${String(now.getDate()).padStart(2, '0')}/${String(now.getMonth() + 1).padStart(2, '0')}/${now.getFullYear()}`;
+  if (d && OFFER.topbarDate) d.textContent = OFFER.topbarDate;
 
   // Contador hasta la medianoche (hora del visitante). Reinicia cada día.
   const el = (id) => document.getElementById(id);
