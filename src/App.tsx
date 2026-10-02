@@ -14,8 +14,8 @@ export default function App() {
     <>
       {/* ===== BARRA SUPERIOR ===== */}
       <div className="topbar">
-        <p className="tb1"><span aria-hidden="true">⚠️</span> <span id="topbar-text">DESCUENTO EXCLUSIVO SOLO HOY</span></p>
-        <p className="tb2" id="topbar-date">02/10/2026</p>
+        <p className="tb1"><span aria-hidden="true">⚠️</span> <span>DESCUENTO EXCLUSIVO SOLO HOY</span></p>
+        <p className="tb2">02/10/2026</p>
       </div>
       {/* ===== HERO ===== */}
       <header className="hero">
