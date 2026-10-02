@@ -6,6 +6,7 @@ import { Localization } from './localization.js';
 import { initPrices } from './price.js';
 import { initCountrySelectors } from './country-selector.js';
 import { OFFER } from './config/offer.js';
+import { initMeta } from './meta.js';
 
 let started = false;
 
@@ -13,6 +14,7 @@ export function initPage() {
   if (started) return; // evita doble arranque (React StrictMode)
   started = true;
 
+  initMeta();
   initPrices();
   initCountrySelectors();
   Localization.init();
