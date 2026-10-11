@@ -41,10 +41,22 @@ export const CONVERSION = {
   psychologicalRounding: true,
 };
 
-// Tasas de respaldo (28/09/2026, open.er-api.com) por si todas las APIs fallan.
-// Solo se usan para mostrar algo coherente; el checkout define el precio final.
+// Tasas de respaldo actualizadas el 11/10/2026 desde open.er-api.com.
+// Se usan solo si la consulta de cambio en vivo falla. Los precios base siguen
+// siendo USD 5 (Pack Básico) y USD 15 (Pack Completo).
 export const STATIC_RATES = {
-  MXN: 17.7355, COP: 3334.28, CLP: 962.26, PEN: 3.3929, ARS: 1523.97,
-  BRL: 5.1895, UYU: 40.063, PYG: 5923.87, BOB: 12.2333, CRC: 452.98,
-  GTQ: 7.6347, HNL: 26.831, NIO: 36.795, DOP: 59.459,
+  MXN: 18.304854,
+  COP: 3236.681829,
+  CLP: 978.602338,
+  PEN: 3.442249,
+  ARS: 1515.8766,
+  BRL: 5.010865,
+  UYU: 40.053467,
+  PYG: 5817.559533,
+  BOB: 11.950434,
+  CRC: 455.5843,
+  GTQ: 7.632683,
+  HNL: 26.81248,
+  NIO: 36.755327,
+  DOP: 60.523185,
 };
