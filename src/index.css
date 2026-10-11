@@ -228,3 +228,164 @@ html.pricing-pending .p-now.skel:empty::before,html.pricing-pending b.skel:empty
   50%{transform:scale(1.05);box-shadow:0 16px 32px rgba(225,29,46,.45),0 0 0 12px rgba(242,59,69,0)}
 }
 @media (prefers-reduced-motion:reduce){.hero .btn-red{animation:none}}
+
+
+/* ---------- Correcciones de móvil: planes, bonos y testimonios ---------- */
+/* Evita que las tarjetas se mantengan en dos columnas o se salgan de la pantalla. */
+.plans,
+.bonus-top,
+.bonus-mini {
+  min-width: 0;
+  width: 100%;
+}
+.plans > *,
+.bonus-top > *,
+.bonus-mini > * {
+  min-width: 0;
+  max-width: 100%;
+}
+.plan {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.plan .btn {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  touch-action: manipulation;
+}
+.plan.dark {
+  isolation: isolate;
+}
+.ribbon {
+  z-index: 3;
+  max-width: calc(100% - 24px);
+  text-align: center;
+}
+.bcard h3,
+.bcard p,
+.bonus-mini figcaption {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.bonus-mini figure {
+  min-width: 0;
+}
+.bonus-mini figcaption {
+  hyphens: auto;
+}
+
+/* Compatibilidad con distintas variantes de tarjetas de testimonios/reseñas. */
+.testimonials,
+.testimonials-grid,
+.testimonial-grid,
+.reviews,
+.reviews-grid,
+.depoimentos,
+.depoimentos-grid {
+  min-width: 0;
+  width: 100%;
+}
+.testimonial,
+.testimonial-card,
+.review,
+.review-card,
+.depoimento,
+.depoimento-card,
+.testimonials > *,
+.testimonials-grid > *,
+.testimonial-grid > *,
+.reviews > *,
+.reviews-grid > *,
+.depoimentos > *,
+.depoimentos-grid > * {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.testimonial h3,
+.testimonial-card h3,
+.review h3,
+.review-card h3,
+.depoimento h3,
+.depoimento-card h3,
+.testimonial .name,
+.testimonial-card .name,
+.review .name,
+.review-card .name,
+.depoimento .name,
+.depoimento-card .name {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 900px) {
+  .plans {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: 520px;
+    gap: 34px;
+  }
+  .plans > .plan {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+  .bonus-top {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: 460px;
+    gap: 28px;
+  }
+  .bonus-mini {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .plans {
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 36px;
+  }
+  .plan {
+    padding: 34px 18px 24px;
+  }
+  .plan .p-now {
+    font-size: clamp(36px, 12vw, 54px);
+    overflow-wrap: anywhere;
+  }
+  .plan .btn {
+    width: 100%;
+    padding: 16px 12px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .plan.dark .btn-green {
+    animation: none;
+  }
+  .bonus-top {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .bcard {
+    padding: 22px 16px;
+  }
+  .bonus-mini {
+    padding-left: 16px;
+    padding-right: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .ribbon {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+  .topbar {
+    overflow-wrap: anywhere;
+  }
+}
